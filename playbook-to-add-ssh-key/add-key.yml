@@ -1,0 +1,14 @@
+---
+- name: "Playbook to Add Key to EC2 Instances"
+  hosts: all
+  vars:
+    - status : "present"
+    - key : "~/.ssh/id_rsa.pub"
+    - ansible_ssh_extra_args: '-o StrictHostKeyChecking=no'
+  tasks:
+
+  - name: "Copy the authorized key file from"
+    authorized_key:
+      user: "{{ansible_user}}"
+      state: "{{status}}"
+      key: "{{ lookup('file', '{{ key }}')}}"

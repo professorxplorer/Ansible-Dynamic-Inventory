@@ -1,0 +1,54 @@
+---
+# tasks file for Aerospike-setup
+- name: Checking ibus-libpinyin packages if not present installing
+  ansible.builtin.apt:
+    name: ibus-libpinyin
+    state: present
+    update_cache: true
+  become: true
+
+
+- name: Install python  (state=present is optional)
+  apt:
+    name: python
+    state: present
+
+- name: Installing Aerospike
+  shell:
+    cmd: |
+      mkdir install
+      cd install
+      wget -O aerospike.tgz https://download.aerospike.com/download/server/4.5.3.5/artifact/ubuntu18
+      tar -xvf aerospike.tgz
+      cd aerospike-server-community-4.5.3.5-ubuntu18.04
+      sudo ./asinstall
+
+
+- name: Transfer executable aerospike.ini for Installing Aerospike
+  copy: src=/home/professor/Desktop/Ansible/first/Ansible/Aerospike-Reportica/aerospike.ini dest=/usr/local/apache/htdocs/reportica/application/configuration/
+
+- name: Creating a file with content
+  copy:
+    dest: "/usr/local/apache/htdocs/reportica/application/configuration/aerospike.ini"
+    content: |
+        ; Aerospike configuration file
+
+        [hosts]
+
+        ; Aerospike server IP/host
+        "addr = "192.168.79.9"
+            
+        ; Port number where aerospike service is listening to
+        port = ""3000""
+
+        ;in seconds
+        ttl = ""1800"""
+        line 02
+
+- name: mentioning the server IP in reportica backend in  aerospike.ini file
+  shell:
+    cmd: |
+      mkdir -p /usr/local/apache/htdocs/reportica/application/configuration/
+      cd /usr/local/apache/htdocs/reportica/application/configuration/
+      privateIP=$(hostname -I)
+      sed -i '6s/.*/addr = ""'"$privateIP"'""/' aerospike.ini

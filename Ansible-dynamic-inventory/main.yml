@@ -1,0 +1,14 @@
+---
+- name: Aerospike
+  hosts: tag_dev_view
+  gather_facts: no
+  # vars_files:
+  #    - secrets.yml
+  vars:
+  #   repo: 'git@github.com:pxsushil/testfor.git'
+    dest: "/home/professor/Desktop/Ansible/first/Ansible/Aerospike-"
+  #   sshkey: "~/.ssh/id_rsa"
+  remote_user: ubuntu
+  become: true
+  roles:
+    - Aerospike-setup
