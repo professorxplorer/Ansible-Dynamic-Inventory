@@ -14,15 +14,13 @@ in hosts
 
 run this cmd in root of this project
 
-```ansible-playbook -i ec2.py add-key.yml -u ubuntu --private-key=/home/professor/Downloads/Ansible-srv.pem -e "key=~/.ssh/id_rsa.pub"
-```
+```ansible-playbook -i ec2.py add-key.yml -u ubuntu --private-key=/home/professor/Downloads/Ansible-srv.pem -e "key=~/.ssh/id_rsa.pub" ```
 
 Now all of your ec2 servers have you .pub key
 
 to remove latter
 
-```ansible-playbook -i ec2.py add-key.yml -u ubuntu --private-key=/home/professor/Downloads/Ansible-srv.pem -e "key=~/.ssh/id_rsa.pub status=absent"
-```
+```ansible-playbook -i ec2.py add-key.yml -u ubuntu --private-key=/home/professor/Downloads/Ansible-srv.pem -e "key=~/.ssh/id_rsa.pub status=absent"```
 
 
 ansible -i ec2.py  ap-south-1a --list-hosts
