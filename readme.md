@@ -7,12 +7,12 @@
 
 ### Setup 
 
-# Optional Step to to add ssh to all ec2 instances in on go ! or to setup ssh in ansible hosts [Click here](https:) 
+# Optional Step to to add ssh to all ec2 instances in on go ! or to setup ssh in ansible hosts [Click here](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/tree/master/playbook-to-add-ssh-key) 
 
 
 To get help on dynamic inventory please follow  [Ansible Official Document](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html#inventory-script-example-aws-ec2)
 
-1. Download [ec2.py]() and [ec2.ini]() files
+1. Download [ec2.py](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/blob/master/Ansible-dynamic-inventory/ec2.py) and [ec2.ini](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/blob/master/Ansible-dynamic-inventory/ec2.ini) files
 
 2. Create IAM Programmatic access user with EC2 full access on AWS console if you are using ec2 instamce as your ansible server
 
@@ -99,6 +99,18 @@ To get help on dynamic inventory please follow  [Ansible Official Document](http
 
 ## to run playbook 
 ``` ansible-playbook -i ec2.py --limit "tag_App_backend:&tag_Environment_staging:&tag_Usage_clock_worker" main.yml ```
+
+
+
+
+## Authors
+
+Module is maintained by [Professor Xplorer](https://professorexplorer.github.io/) 
+
+## License
+
+ Licensed. See [LICENSE]() for full details.
+
 
 
 
