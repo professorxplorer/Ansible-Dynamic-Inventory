@@ -42,7 +42,7 @@ To get help on dynamic inventory please follow  [AWS Official Document](https://
    ``` AWS Access Key ID [****************DN5V]:  ```
 
    ``` AWS Secret Access Key [****************W8mX]: ```
-   
+
    ``` Default region name [us-east-1]:  ```
 
    ```bash
@@ -87,7 +87,8 @@ To get help on dynamic inventory please follow  [AWS Official Document](https://
   
 ```
 2. than we can run our play-book as
-  ``` ansible-playbook -i ec2.py main.yml ``
+  ``` ansible-playbook -i ec2.py main.yml ```
+  
   in this as we are giving tags in playbook tag is combination of ```tag_dev_view``` tag--> tag dev --> key view-->value
 
 
