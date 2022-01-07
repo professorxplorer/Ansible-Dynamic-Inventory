@@ -12,6 +12,9 @@
 
 To get help on dynamic inventory please follow  [Ansible Official Document](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html#inventory-script-example-aws-ec2)
 
+
+To get help on dynamic inventory please follow  [AWS Official Document](https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/)
+
 1. Download [ec2.py](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/blob/master/Ansible-dynamic-inventory/ec2.py) and [ec2.ini](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/blob/master/Ansible-dynamic-inventory/ec2.ini) files
 
 2. Create IAM Programmatic access user with EC2 full access on AWS console if you are using ec2 instamce as your ansible server
