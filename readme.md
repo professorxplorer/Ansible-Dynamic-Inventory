@@ -76,7 +76,7 @@ To get help on dynamic inventory please follow  [AWS Official Document](https://
    ```
 6. How to Run playbook with tags
 
-### Option1 1
+### Option 1
 1. We can run asible playbook for our sever with some specife tag by giving hosts name as tag in our playbook
 
 ``` ---
@@ -88,11 +88,11 @@ To get help on dynamic inventory please follow  [AWS Official Document](https://
 ```
 2. than we can run our play-book as
   ``` ansible-playbook -i ec2.py main.yml ```
-  
-  in this as we are giving tags in playbook tag is combination of ```tag_dev_view``` tag--> tag dev --> key view-->value
+
+    in this as we are giving tags in playbook tag is combination of ```tag_dev_view``` tag--> tag dev --> key view-->value
 
 
-### Option1 2
+### Option 2
  
 1. In this we can give multiple tags to our ansible server to identify environment and name , Because we could have same name in multiple environment.
 
