@@ -40,7 +40,9 @@ To get help on dynamic inventory please follow  [AWS Official Document](https://
    Enter your aws Access and secret Access keys
 
    ``` AWS Access Key ID [****************DN5V]:  ```
+
    ``` AWS Secret Access Key [****************W8mX]: ```
+   
    ``` Default region name [us-east-1]:  ```
 
    ```bash
