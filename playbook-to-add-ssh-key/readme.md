@@ -1,3 +1,5 @@
+# Adding .pub key to all ansible hosts dynamically
+
 add 
 [defaults]
 host_key_checking = False and "private_key_file = /Downloads/Ansible-srv.pem" key path 
