@@ -1,6 +1,6 @@
 # Ansible Dynamic Inventory for AWS EC2
 ### Pre-requisites:
-1. Ansible Server - Get [Click here](https:) to install on RHEL 8 and [click here](https:) to install on Amazon Linux
+1. Ansible Server - Get [Click here](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html#inventory-script-example-aws-ec2) to install on RHEL 8 and [click here](https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/) to install on Amazon Linux
 ### Setup
 # Optional Step to add ssh to all ec2 instances in on go ! or to setup ssh in ansible hosts [Click here](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/tree/master/playbook-to-add-ssh-key)
 To get help on dynamic inventory please follow [Ansible Official Document](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html#inventory-script-example-aws-ec2)
@@ -12,7 +12,7 @@ To get help on dynamic inventory please follow [AWS Official Document](https://a
 2. Export IAM user credentials on the Ansible server. if you are using your own machine as a server
 Get an IAM role and get secret keys from AWS account.
 2. Install AWS CLI on your machine.
-```sudo apt-get update``
+```sudo apt-get update```
 ``` sudo apt-get install awscli ```
 2. Configure aws cli
 ``` aws configure ```
@@ -24,7 +24,7 @@ Enter your aws Access and secret Access keys
 export AWS_ACCESS_KEY_ID='1bc123'
 export AWS_SECRET_ACCESS_KEY='abc123'
 ```
-3. install pyhton pip and boto3
+3. install python-pip and boto3
 ## Install Python
 ``` sudo apt-get install python ```
 ## Install pip
@@ -61,11 +61,11 @@ in this as we are giving tags in playbook tag is the combination of ```tag_dev_v
 1. In this we can give multiple tags to our ansible server to identify environment and name Because we could have the same name in multiple environments.
 2. For this we can get our hosts to all AWS we don't have any hosts as it's dynamic inventory.
 3. Now we will be providing tags in command while running the ansible-playbook
-## to ping server with tag
+## To ping server with tag
 ``` ansible -i ec2.py - limit "tag_App_backend:&tag_Environment_staging:&tag_Usage_clock_worker" -m ping all ```
-## to run playbook
+## To run the playbook
 ``` ansible-playbook -i ec2.py - limit "tag_App_backend:&tag_Environment_staging:&tag_Usage_clock_worker" main.yml ```
 ## Authors
-Module is maintained by [Professor Xplorer](https://professorexplorer.github.io/)
+The module is maintained by  [Professor Xplorer](https://professorexplorer.github.io/)
 ## License
 Licensed. See [LICENSE]() for full details.
