@@ -7,7 +7,7 @@
 
 ### Setup 
 
-# Optional Step to to add ssh to all ec2 instances in on go ! or to setup ssh in ansible hosts [Click here](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/tree/master/playbook-to-add-ssh-key) 
+# Optional Step  to add ssh to all ec2 instances in on go ! or to setup ssh in ansible hosts [Click here](https://github.com/professorxplorer/Ansible-Dynamic-Inventory/tree/master/playbook-to-add-ssh-key) 
 
 
 To get help on dynamic inventory please follow  [Ansible Official Document](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html#inventory-script-example-aws-ec2)
