@@ -17,8 +17,8 @@ Get an IAM role and get secret keys from AWS account.
 2. Configure aws cli
 ``` aws configure ```
 Enter your aws Access and secret Access keys
-``` AWS Access Key ID [****************DN5V]: ```
-``` AWS Secret Access Key [****************W8mX]: ```
+``` AWS Access Key ID [****************DQ7G]: ```
+``` AWS Secret Access Key [****************W9mW]: ```
 ``` Default region name [us-east-1]: ```
 ```bash
 export AWS_ACCESS_KEY_ID='1bc123'
